@@ -3,9 +3,9 @@ class Team
   attr_accessor :name,:motto
   @@all = []
 
-  def initialize(name:,motto:,heros:)
-    @name = name
-    @motto = motto
+  def initialize(hash_in)
+    @name = hash_in[:name]
+    @motto = hash_in[:motto]
     @@all << self
   end
 
