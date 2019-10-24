@@ -3,10 +3,10 @@ class Hero
   attr_accessor :name,:power,:bio
   @@all = []
 
-  def initialize(name:,power:,bio:)
-    @name = name
-    @power = power
-    @bio = bio
+  def initialize(hash_in)
+    @name = hash_in[:name]
+    @power = hash_in[:power]
+    @bio = hash_in[:bio]
     @@all << self
   end
 
